@@ -87,7 +87,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
     await fetchImage();
     setTimeout(() => {
       dispatch(updateUser(param.id, UserData));
-    }, 3000);
+    }, 2000);
     setModalOpened(false);
   };
   return (
