@@ -23,7 +23,6 @@ function Posts({ location }) {
   if (location === "profilePage") {
     const postProfile = posts.filter((post) => post.userId === user._id);
     posts = postProfile;
-    console.log(posts);
   }
   return (
     <div className="Posts">
