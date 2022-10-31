@@ -21,7 +21,6 @@ export const signUp = (formData) => async (dispatch) => {
     dispatch({ type: "AUTH_SUCCESS", data: data });
     toast.success("sign up successfully ");
   } catch (error) {
-    console.log(error);
     toast.error(error.response.data);
     dispatch({ type: "AUTH_FAIL" });
   }
