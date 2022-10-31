@@ -5,6 +5,7 @@ export const updateUser = (id, formData) => async (dispatch) => {
 
   try {
     const { data } = await UserApi.updateUser(id, formData);
+
     dispatch({ type: "UPDATING_SUCCESS", data: data });
   } catch (err) {
     dispatch({ type: "UPDATING_FAIL" });
