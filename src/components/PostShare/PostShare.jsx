@@ -60,14 +60,14 @@ function PostShare(props) {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             newPost.image = downloadURL;
             console.log(newPost);
+            dispatch(uploadPost(newPost));
           });
         }
       );
+    } else {
+      dispatch(uploadPost(newPost));
     }
 
-    setTimeout(() => {
-      dispatch(uploadPost(newPost));
-    }, 1500);
     reset();
     setModalOpened(false);
   };
